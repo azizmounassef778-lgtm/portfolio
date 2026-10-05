@@ -6,39 +6,51 @@ function Projects() {
     <section id="projects" className="projects-section">
       <div className="projects-container">
 
-        <h2>My Projects</h2>
+        <div className="projects-header">
+          <p className="projects-label">MY WORK</p>
 
-        <p className="projects-subtitle">
-          Here are some of the projects I have worked on.
-        </p>
+          <h2>
+            My <span>Projects</span>
+          </h2>
+
+          <p className="projects-subtitle">
+            Here are some of the projects I have worked on.
+          </p>
+        </div>
 
         <div className="projects-grid">
-
           {projects.map((project, index) => (
-            <div className="project-card" key={index}>
+            <article className="project-card" key={index}>
 
               {/* Project Image */}
-              {project.image && (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                />
-              )}
+              <div className="project-image-wrapper">
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                  />
+                )}
+              </div>
 
               {/* Project Content */}
               <div className="project-content">
 
-                <h3>{project.title}</h3>
+                <div>
+                  <h3>{project.title}</h3>
 
-                <p className="project-description">
-                  {project.description}
-                </p>
+                  <p className="project-description">
+                    {project.description}
+                  </p>
+                </div>
 
                 {/* Technologies */}
                 <div className="project-technologies">
                   {project.technologies?.map((tech, techIndex) => (
-                    <span key={techIndex} className="technology">
+                    <span
+                      key={techIndex}
+                      className="technology"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -54,7 +66,8 @@ function Projects() {
                       rel="noopener noreferrer"
                       className="project-btn github-btn"
                     >
-                      GitHub
+                      <span>GitHub</span>
+                      <span className="arrow">↗</span>
                     </a>
                   )}
 
@@ -65,17 +78,16 @@ function Projects() {
                       rel="noopener noreferrer"
                       className="project-btn demo-btn"
                     >
-                      Live Demo
+                      <span>Live Demo</span>
+                      <span className="arrow">↗</span>
                     </a>
                   )}
 
                 </div>
 
               </div>
-
-            </div>
+            </article>
           ))}
-
         </div>
 
       </div>
