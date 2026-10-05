@@ -26,10 +26,22 @@ function Contact() {
             >
               azizmounassef778@gmail.com
             </a>
+
+            <br />
+
+            <a
+              href="https://www.linkedin.com/in/aziz-mounassef-038724363/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="linkedin-link"
+            >
+              LinkedIn
+            </a>
           </div>
 
           <div className="contact-card">
 
+            {/* Email */}
             <a
               href="mailto:azizmounassef778@gmail.com"
               className="contact-item"
@@ -42,6 +54,22 @@ function Contact() {
               </div>
             </a>
 
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/aziz-mounassef-038724363/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-item"
+            >
+              <div className="contact-icon">in</div>
+
+              <div>
+                <span>LinkedIn</span>
+                <strong>Aziz Mounassef</strong>
+              </div>
+            </a>
+
+            {/* Availability */}
             <div className="contact-item">
               <div className="contact-icon">↗</div>
 

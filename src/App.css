@@ -751,3 +751,20 @@ section {
     width: 100%;
   }
 }
+
+.linkedin-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #0077b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.linkedin-link:hover {
+  background: #005582;
+  transform: translateY(-3px);
+}
