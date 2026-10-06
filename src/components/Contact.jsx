@@ -1,18 +1,19 @@
 import React from 'react';
 
+const EMAIL = 'azizmounassef778@gmail.com';
+const LINKEDIN = 'https://www.linkedin.com/in/aziz-mounassef-038724363/';
+
 function Contact() {
   return (
-    <section className="contact" id="contact">
+    <section className="section contact" id="contact">
       <div className="section-container">
-
-        <div className="section-header">
+        <div className="section-header" data-reveal>
           <p className="section-label">Get in touch</p>
-          <h2>Contact <span>Me</span></h2>
+          <h2>Contact Me</h2>
         </div>
 
         <div className="contact-content">
-
-          <div className="contact-text">
+          <div className="contact-text" data-reveal>
             <h3>Let's work together</h3>
 
             <p>
@@ -20,69 +21,51 @@ function Contact() {
               experience, work on real-world projects, and grow as a developer.
             </p>
 
-            <a
-              href="mailto:azizmounassef778@gmail.com"
-              className="email-link"
-            >
-              azizmounassef778@gmail.com
+            <a href={`mailto:${EMAIL}`} className="email-link">
+              {EMAIL}
             </a>
 
-            <br />
-
             <a
-              href="https://www.linkedin.com/in/aziz-mounassef-038724363/"
+              href={LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
-              className="linkedin-link"
+              className="btn secondary-btn linkedin-link"
             >
               LinkedIn
             </a>
           </div>
 
-          <div className="contact-card">
-
-            {/* Email */}
-            <a
-              href="mailto:azizmounassef778@gmail.com"
-              className="contact-item"
-            >
-              <div className="contact-icon">@</div>
-
+          <div className="contact-card" data-reveal style={{ '--d': '100ms' }}>
+            <a href={`mailto:${EMAIL}`} className="contact-item">
+              <div className="contact-icon" aria-hidden="true">@</div>
               <div>
                 <span>Email</span>
-                <strong>azizmounassef778@gmail.com</strong>
+                <strong>{EMAIL}</strong>
               </div>
             </a>
 
-            {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/aziz-mounassef-038724363/"
+              href={LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
               className="contact-item"
             >
-              <div className="contact-icon">in</div>
-
+              <div className="contact-icon" aria-hidden="true">in</div>
               <div>
                 <span>LinkedIn</span>
                 <strong>Aziz Mounassef</strong>
               </div>
             </a>
 
-            {/* Availability */}
-            <div className="contact-item">
-              <div className="contact-icon">↗</div>
-
+            <div className="contact-item is-static">
+              <div className="contact-icon" aria-hidden="true">↗</div>
               <div>
                 <span>Available for</span>
-                <strong>Internships & Opportunities</strong>
+                <strong>Internships &amp; Opportunities</strong>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
